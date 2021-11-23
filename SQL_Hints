@@ -1,3 +1,5 @@
+
+pseudo SQL
 collect all puids of PPSOCCURRENCENOTES to be deleted in to a temporary table
 1. delete all references from PPSOCCURRENCENOTES
 2. delete all from_uid and to_uid references of those puids in backpointer table
