@@ -1,0 +1,8 @@
+collect all puids of PPSOCCURRENCENOTES to be deleted in to a temporary table
+1. delete all references from PPSOCCURRENCENOTES
+2. delete all from_uid and to_uid references of those puids in backpointer table
+3. delete all references from pom_object table
+4. in table PPSOCCURRENCE set all references of rnotes_refu to 'AAAAAAAAAAAAAA', rnotes_refc = -1 WHERE rnotes_refu IN the uids that are deleted at step 1. ( so that the location of the deleted puid can be tracked later.)
+commit
+5. run VLA Inconsistency on the class PSOccurrenceNotes for attribute note_types especially for puids collected and deleted at Step 1.
+commit
