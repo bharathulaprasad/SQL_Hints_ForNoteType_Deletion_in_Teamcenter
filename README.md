@@ -1,0 +1,1 @@
+# SQL_Hints_ForNoteType_Deletion_in_Teamcenter
